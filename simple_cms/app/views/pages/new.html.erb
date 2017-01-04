@@ -1,0 +1,28 @@
+<%= link_to("Back to list" ,pages_path, :class => 'back-link')%>
+
+<div class="New Page">
+  <h2>Create subject</h2>
+  <%= form_for(@page, :url => pages_path, :method => 'post') do |f| %>
+      <!--post creates a new object on the resource.However ,the helper is smart,url and method is optional  -->
+      <table summary="Page form fields" >
+        <tr>
+          <th>Name</th>
+          <td><%= f.text_field(:name) %></td>
+        </tr>
+
+        <tr>
+          <th>Position</th>
+          <td><%= f.text_field(:position) %></td>
+        </tr>
+
+        <tr>
+          <th>Visisble</th>
+          <td><%= f.text_field(:visible) %></td>
+        </tr>
+      </table>
+
+      </div>
+
+      <div class="form-buttons">
+        <%= f.submit("Create Subject") %>
+      </div><% end %>

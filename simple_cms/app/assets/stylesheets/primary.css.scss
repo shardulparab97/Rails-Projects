@@ -1,0 +1,32 @@
+$red: #993120;
+$green: #94B26F;
+$light_green: #B6D491;
+$yellow: #F2DC87;
+$dark_brown: #332318;
+$white: #ffffff;
+$light_brown: #4C2516;
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  width:100%;
+  min-width: 980px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+}
+
+#header{
+  background: $red;
+  min-height: 500px;
+  color: $white;
+}
+#main{
+  min-height: 500px;
+  background: $yellow;
+}

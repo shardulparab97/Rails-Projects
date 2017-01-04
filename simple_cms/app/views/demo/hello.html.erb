@@ -1,0 +1,30 @@
+<h1>Hello world from hello page</h1>
+
+<font color='blue'><% val=1+3 %><%= val %><br>
+    <%target="world"%>
+    <%= "Hello #{target}"%>
+    
+    <br>Now see the difference here!<br>
+    
+    <%=
+    3.times do |n|
+        puts n
+    end
+    %>
+    <br><br>
+    Method 2
+    <% 3.times do |n| %>
+    <%= n %><br>
+    <%end%>
+    
+    <br>Method 3<br>
+    <% @array.each do |n|%>
+    <%= n%>
+    <%end   %>
+    
+    <br>
+    ID:<%= @id %>    PAGE:<%= @page %>
+    NEXT PAGE:<%= @page.to_i+1 %>
+    
+    <%= link_to('go back to index','/demo/index')%>
+</font>

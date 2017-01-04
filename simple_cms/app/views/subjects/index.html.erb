@@ -1,0 +1,38 @@
+<% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+
+<div class="subject Index">
+  <h1>Subjects</h1>
+<%= link_to("Add new subject",new_subject_path,:class => 'action new') %>
+
+  <table class="'listing"  summary="Subject Lists">
+    <tr class="header">
+      <th>#</th>
+      <th>Subject</th>
+      <th>Visible</th>
+      <th>Pages</th>
+      <th>Actions</th>
+    </tr>
+
+      <% @subjects.each do |sub| %>
+        <tr>
+          <td><%= sub.position %></td>
+          <td><%= sub.name %></td>
+          <td class="center"><%= status_tag(sub.visible)%></td>
+          <td class='center'><%= sub.pages.size %></td>
+          <td class="actions">
+            <%= link_to("Show","subjects/#{sub.id}",:class => 'action show') %>
+            <!-- another entry to addr. can be
+            {:controller => 'subjects', :action => 'show' ,:id => sub.id} #no ""
+            #method 3
+            subject_path(sub) #No "" needed-->
+            <%= link_to("Edit",edit_subject_path(sub.id),:class => 'action edit') %>
+            <%= link_to("Delete",delete_subject_path(sub),:class => 'action delete') %>
+          </td>
+        </tr>
+        <% end %>
+  </table>
+</div>

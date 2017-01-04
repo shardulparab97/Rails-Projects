@@ -1,0 +1,33 @@
+<%= link_to("Back to list",subjects_path,:class => 'back-link') %>
+<div class="subjects show">
+
+<h1>Subject Show</h1>
+<p>Find me in app/views/subjects/show.html.erb</p>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><%= @subject.name %></td>
+    </tr>
+
+    <tr>
+      <th>Position</th>
+      <td><%= @subject.position %></td>
+    </tr>
+
+    <tr>
+      <th>Visble</th>
+      <td><%= @subject.visible %></td>
+    </tr>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @subject.created_at %></td>
+    </tr>
+
+    <tr>
+      <th>Updated</th>
+      <td><%= @subject.updated_at %></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Cms One</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
+ <!-- #<%#= stylesheet_link_tag('admin',:media => 'all    ') %> -->
+  <style>
+    span.status {display: block;width:10px;height: 10px;margin:0.25em auto;padding: 0;border:1px solid #000000;  }
+    span.status.true{background:green;color: white;}
+    span.status.false{background: red;color: white;}
+  </style>
+</head>
+
+<body>
+<% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+<% end %>
+<!-- Template gets dropped in here -->
+<%= yield %>
+</body>
+</html>
