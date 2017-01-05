@@ -1,3 +1,4 @@
+require 'nmatrix'
 class Baseball
 
 end
